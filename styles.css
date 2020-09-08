@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* global stuff */
+
+::selection {
+    background: #de007b;
+    color: #fff
+}
+
+
+/* Navigation bar elements */
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #1f1e1e;
+    margin: 0px;
+    padding: 10px;
+}
+
+.navbarlogo {
+    font-family: 'Pacifico', cursive;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbarlogo:hover {
+    color: #de007b;
+}
+
+.navbar > ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0px 100px 0px 100px;
+}
+
+.navbar > ul > li {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px 10px 0px 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.navbar > ul > li > a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar > ul > li > a:hover {
+    color: #cd4ba4;
+    text-decoration: none;
+}
+
+.sign-in-button a {
+    background-color: #de007b;
+    color: #fff;
+    padding: 10px;
+}
+
+.sign-in-button a:hover {
+    color: #fff;
+}
+
+/* body and title elements */
+
+body {
+    background-image: url("./background.jpeg");
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: auto;
+}
+
+.blur-bgimage {
+    overflow: hidden;
+    margin: 0;
+    text-align: left;
+}
+
+.blur-bgimage:before {
+    content: "";
+    position: absolute;
+    width : 100%;
+    height: 100%;
+    background: inherit;
+    z-index: -1;
+
+    filter        : blur(1px);
+    -moz-filter   : blur(1px);
+    -webkit-filter: blur(1px);
+    -o-filter     : blur(1px);
+
+    transition        : all 2s linear;
+    -moz-transition   : all 2s linear;
+    -webkit-transition: all 2s linear;
+    -o-transition     : all 2s linear;
+}
+
+#spacer {
+    height: 150px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,.2);
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 96px;
+    font-weight: 500;
+    margin: 0px, 0px, 30px, 0px;
+    padding: 10px;
+}
+
+h2 {
+    letter-spacing: .035em;
+    line-height: 1.2;
+    font-size: 64px;
+    font-weight: 500;
+}
+
+h3 {
+    letter-spacing: .035em;
+    line-height: 1.2;
+    font-size: 25px;
+}
+
+
+/* Search box elements */
+
+#searchbox {
+    background-color: rgba(30, 30, 30, 0.95);
+    border: solid 1px #25292e;
+    padding: 15px 10px 15px 10px;
+    margin: 25px auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px 16px rgba(64, 64, 64, 0.2);
+    min-width: 50vw;
+    max-width: 1024px;
+}
+
+#searchbox > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin: 10px 0px 10px -40px;
+}
+
+#searchbox > ul > li {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px 10px 0px 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#searchbox > ul > li > a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 13px 5px 13px;
+}
+
+#searchbox > ul > li > a:hover {
+    background: #de007b;
+    border-radius: 32px;
+
+}
+
+/* search bar elements */
+
+#searchstripe, #searchstripe:before, #searchstripe:after {
+    box-sizing: border-box;
+    padding: 10px;
+    display: block;
+}
+
+#searchbar, #searchbar:before, #searchbar:after {
+    box-sizing: border-box;
+    height: 40px;
+    width: 100%;
+}
+
+#searchbar > input {
+    vertical-align: top;
+    height: 40px;
+    color: #000;
+    width: 40%;
+    margin: 0px;
+    border: solid 1px #1f1e1e;
+    display: inline-block;
+}
+
+#searchbar-left-input {
+    padding: 5px 5px 5px 10px;
+}
+
+#searchbar-right-input {
+    padding: 5px 5px 5px 30px;
+}
+
+#searchbar > button {
+    width: 40px;
+    height: 40px;
+    max-height: 40px;
+    border: solid 1px #000;
+    border-radius: 20px;
+    font-size: 25px;
+    color: #000;
+    line-height: 30px;
+    text-align: center;
+    background: #fff;
+    display: table-cell;
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: -20px;
+    position: absolute;
+}
+
+#searchbar > button:hover {
+    color: #de007b;
+}
+
+#searchbar > #searchbar-submit {
+    display: inline-block;
+    width: 18%;
+    border: solid 1px #de007b;
+    background: #de007b;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    border-radius: 3px;
+    height:40px;
+    margin-left: 10px;
+}
+
+
+/* bottom elements */
+
+#checkboxbar {
+    font-size: 12px;
+    color:  #fff;
+    margin-left:25vw;
+    vertical-align: top;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    display: inline-block;
+    cursor: pointer;
+    height: 10px;
+    line-height:10px;
+    padding: 4px;
+}
+
+#footer {
+    position: absolute;
+    right: 3px;
+    bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #fff;
+    padding: 0px;
+    margin: 0px;
+}
+
+#footer > span {
+    background-color: rgba(47, 49, 50, 0.8);
+    padding: 10px;
+    border-radius: 1px;
+    margin: 0px;
+}
+
+#footer > span > a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#footer > span > a:hover {
+    text-decoration: underline;
+}
