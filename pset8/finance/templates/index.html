@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+    <table>
+
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+
+        {% for row in query %}
+        <tr>
+            <td>{{ row["symbol"] }}</td>
+            <td>{{ row["name"] }}</td>
+            <td>{{ row["quantity"] }}</td>
+            <td>{{ row["avg_price"] }}</td>
+            <td>{{ row["total"] }}</td>
+        </tr>
+        {% endfor %}
+
+        <tr>
+            <td>CASH</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{ cash }}</td>
+        </tr>
+
+        <tr style="font-weight: bold;">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{ grand_total }}</td>
+        </tr>
+
+    </table>
+
+{% endblock %}

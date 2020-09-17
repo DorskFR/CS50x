@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+    <table>
+
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Order Type</th>
+            <th>Transacted</th>
+        </tr>
+
+        {% for row in query %}
+        <tr>
+            <td>{{ row["symbol"] }}</td>
+            <td>{{ row["name"] }}</td>
+            <td>{{ row["quantity"] }}</td>
+            <td>{{ row["price"] }}</td>
+            <td>{{ row["order_type"] }}</td>
+            <td>{{ row["timestamp"] }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+{% endblock %}
